@@ -47,6 +47,10 @@ var handleClick = function(){
  var authorText = document.getElementById("author-text-input").value || "anon";
  var quoteNew = new Quote(statementText, authorText)
  addQuote(quoteNew);
+ document.getElementById("quote-text-input").value = ""
+  ;
+  getVal();
+
 }
 
 var quoteStyling = function(){
@@ -63,18 +67,19 @@ var quoteStyling = function(){
 }
 
 function getVal() {
-    var x = document.getElementById("quote-text-input");
-    document.getElementById("fname").innerHTML = x.value;
+      var x = document.getElementById("quote-text-input");
+     document.getElementById("fname").innerText = x.value ;
 }
 
 var init = function(){
   quoteLoad();
   button = document.getElementById("add-button");
   button.onclick = handleClick;
-  
+
+document.getElementById("quote-text-input").addEventListener("keypress", getVal);
+ 
 }
 
 
 window.onload = init;
-getVal();
 
