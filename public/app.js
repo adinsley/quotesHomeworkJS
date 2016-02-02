@@ -86,8 +86,8 @@ var init = function(){
   button = document.getElementById("add-button");
   button.onclick = handleClick;
 
-document.getElementById("quote-text-input").addEventListener("keypress", getValx);
-document.getElementById("author-text-input").addEventListener("keypress", getValy);
+document.getElementById("quote-text-input").addEventListener("keyup", getValx);
+document.getElementById("author-text-input").addEventListener("keyup", getValy);
 //document.getElementById("author-text-input").addEventListener("keypress", getVal);
  
 }

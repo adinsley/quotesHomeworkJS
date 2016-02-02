@@ -4,5 +4,13 @@
 }
 
 blockquote .button {
-  
+
+}
+
+h4, #fname, #cname {
+  display: inline-block;
+}
+
+#cname {
+  font-style: italic;
 }
