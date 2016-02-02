@@ -47,9 +47,11 @@ var handleClick = function(){
  var authorText = document.getElementById("author-text-input").value || "anon";
  var quoteNew = new Quote(statementText, authorText)
  addQuote(quoteNew);
- document.getElementById("quote-text-input").value = ""
+ document.getElementById("quote-text-input").value = "";
+ document.getElementById("author-text-input").value = "";
   ;
-  getVal();
+  getValx();
+  getValy();
 
 }
 
@@ -66,9 +68,17 @@ var quoteStyling = function(){
   }
 }
 
-function getVal() {
+function getValx() {
       var x = document.getElementById("quote-text-input");
-     document.getElementById("fname").innerText = x.value ;
+      //var y = document.getElementById("author-text-input")
+     document.getElementById("fname").innerHTML = x.value ;
+     //document.getElementById("cname").innerText = y.value ;
+}
+
+function getValy() {
+      var y = document.getElementById("author-text-input");
+     document.getElementById("cname").innerText = y.value ;
+     
 }
 
 var init = function(){
@@ -76,7 +86,9 @@ var init = function(){
   button = document.getElementById("add-button");
   button.onclick = handleClick;
 
-document.getElementById("quote-text-input").addEventListener("keypress", getVal);
+document.getElementById("quote-text-input").addEventListener("keypress", getValx);
+document.getElementById("author-text-input").addEventListener("keypress", getValy);
+//document.getElementById("author-text-input").addEventListener("keypress", getVal);
  
 }
 
